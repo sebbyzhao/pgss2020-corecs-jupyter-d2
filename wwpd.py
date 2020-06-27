@@ -4,7 +4,8 @@
 # Imports borrow code from elsewhere
 import math
 
-
+# Global variables
+thisIsntANumber = 17
 
 def is_number(n):
 	return not math.isnan(n)
