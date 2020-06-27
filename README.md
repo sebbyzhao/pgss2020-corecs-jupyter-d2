@@ -1,6 +1,6 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/syreal17/pgss2020-corecs-jupyter-d2/master)
 
-# PGSS 2020 Core CS Day Two Interactive Code Repo
+# PGSS 2020 CS Interactive Code Repo for Day 2
 What does Python understand as a number and what does it not? There are some
 surprising results here, even for experienced coders.
 
