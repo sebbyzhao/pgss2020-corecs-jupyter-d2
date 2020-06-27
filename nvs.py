@@ -14,13 +14,13 @@ def is_number(n):
 
 ### BOOKMARK : loop, ask user for input, check is_number
 def number_verification_service():
-    while ( true ):
+    while ( True ):
         user_entity = input("Enter something to verify if it is a number: ")
         
         if is_number( user_entity ):
             print( "Number Verified: " + str( user_entity ) )
             
-        else
+        else:
             print( "Not a Number." )
 
 
