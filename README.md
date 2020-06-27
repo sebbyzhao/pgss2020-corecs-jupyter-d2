@@ -4,7 +4,7 @@
 What does Python understand as a number and what does it not? There are some
 surprising results here, even for experienced coders.
 
-# Instructions on interacting with coders
+# Instructions on interacting with this code repo
 
 Click the "Launch Binder" button at the top of this document.
 
