@@ -1,6 +1,6 @@
 # A handful of functions to support seeing what Python thinks is a number
 # AUTHOR: LT
-# EMAIL: See end of slides
+# EMAIL: ltjones@acm.org
 
 
 
