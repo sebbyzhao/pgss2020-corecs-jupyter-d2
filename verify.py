@@ -16,7 +16,7 @@ thisIsANumber = "psych! It's actually a string (of letters)"
 
 
 def is_number(n):
-    """Returns True if n is a number and false otherwise
+    """Returns True if n is a number and false otherwise.
     
     NOTE: This function is an inversion of the standard isnan (Is Not a Number)
     function. Generally, I find asking questions in the positive 
@@ -28,10 +28,10 @@ def is_number(n):
 
 
 def number_verification_service():
-    """Verify that user input is a number
+    """Verify that user input is a number.
     
     As a service, this function asks for user input and verifies until 
-    terminated
+    terminated.
     """
 
     # NOTE: while ( True ) means that this loops "forever"
