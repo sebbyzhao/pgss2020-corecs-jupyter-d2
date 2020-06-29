@@ -1,53 +1,29 @@
-# Hiding this really important number in an obscure piece of code is brilliant!
-# AND it's encrypted!
-# We want our biggest client to know his information is safe with us.
-bezos_cc_secret = "_aeg\\e`aa\\bg`g\\`beg"
-
 # Reference alphabet
 alphabet = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 
 
 
-def decode_secret(secret):
-    """ROT47 decode
+def encode_secret(secret):
+    """Custom rotation encryption 
     
-    NOTE: encode and decode are the same operation in the ROT cipher family.
+    NOTE: Virtually impenetrable, probably
     """
     
     # Encryption key
-    rotate_const = 47
+    rotate_const = 3
     
-    # Storage for decoded secret
-    decoded = ""
+    # Storage for encoded secret
+    encoded = ""
     
-    # decode loop
+    # encode loop
     for c in secret:
         index = alphabet.find(c)
         original_index = (index + rotate_const) % len(alphabet)
-        decoded = decoded + alphabet[original_index]
+        encoded = encoded + alphabet[original_index]
         
-    print(decoded)
+    print(encoded)
 
 
 
-def choose_greatest():
-    """Echo the largest of the two numbers given by the user to the program
-    
-    Warning: this function was written quickly and needs proper error handling
-    """
-
-    user_value_1 = input("What's your first number? ")
-    user_value_2 = input("What's your second number? ")
-    greatest_value = user_value_1 # need a value to return if 1 & 2 are equal
-
-    if user_value_1 > user_value_2:
-        greatest_value = user_value_1
-    elif user_value_1 < user_value_2:
-        greatest_value = user_value_2
-
-    print( "The number with largest positive magnitude is " 
-        + str(greatest_value) )
-
-
-
-choose_greatest()
+secret = input("Please input secret to encode with hyper-premium encryption technology: ")
+encode_secret(secret)

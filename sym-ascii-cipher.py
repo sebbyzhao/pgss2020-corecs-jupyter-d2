@@ -4,12 +4,13 @@
 bezos_cc_secret = "_aeg\\e`aa\\bg`g\\`beg"
 
 # Reference alphabet
+# This alphabet is the same order as ASCII, but omits non-printable characters
 alphabet = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 
 
 
-def decode_secret(secret):
-    """ROT47 decode
+def symmetrical_rotate(string):
+    """ROT47 implementation
     
     NOTE: encode and decode are the same operation in the ROT cipher family.
     """
@@ -18,15 +19,24 @@ def decode_secret(secret):
     rotate_const = 47
     
     # Storage for decoded secret
-    decoded = ""
+    rotated = ""
     
     # decode loop
-    for c in secret:
+    for c in string:
+    
+        # find the letter in the alphabet. index is now the number that
+        #   represents that letter...
         index = alphabet.find(c)
-        original_index = (index + rotate_const) % len(alphabet)
-        decoded = decoded + alphabet[original_index]
         
-    print(decoded)
+        # this is the meat of the cipher that adds a key value to the index.
+        # The "%" operator wraps the number if it gets bigger than there are
+        #   letters in the alphabet.
+        original_index = (index + rotate_const) % len(alphabet)
+        
+        # this saves each rotated letter to the output string.
+        rotated = rotated + alphabet[original_index]
+        
+    print(rotated)
 
 
 
