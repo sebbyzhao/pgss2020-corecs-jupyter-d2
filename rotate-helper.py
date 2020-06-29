@@ -27,7 +27,7 @@ def rotate(string, key):
 
 
 
-string = input("Rotate what string? ")
-key = input("Rotate by how much? ")
+string = str(input("Rotate what string? (Put between double quotes!) "))
+key = int(input("Rotate by how much? "))
 
 rotate(string, key)
