@@ -9,7 +9,7 @@ alphabet = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`ab
 
 
 
-def symmetrical_rotate(string):
+def symmetrical_rotate(string bezos_cc_secret):
     """ROT47 implementation
     
     NOTE: encode and decode are the same operation in the ROT cipher family.
@@ -37,7 +37,8 @@ def symmetrical_rotate(string):
         rotated = rotated + alphabet[original_index]
         
     print(rotated)
-
+    
+symmetrical_rotate()
 
 
 def choose_greatest():
